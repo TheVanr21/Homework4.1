@@ -36,7 +36,7 @@ public class AppCardDeliveryTest {
         $("[data-test-id='agreement']").click();
         $$("button").find(Condition.exactText("Забронировать")).click();
 
-        $("[data-test-id='notification']").should(Condition.visible);
+        $("[data-test-id='notification']").should(Condition.visible, Duration.ofSeconds(15));
 
     }
 
@@ -69,7 +69,7 @@ public class AppCardDeliveryTest {
         $("[data-test-id='agreement']").click();
         $$("button").find(Condition.exactText("Забронировать")).click();
 
-        $("[data-test-id='notification']").should(Condition.visible, Duration.ofSeconds(15));
+        $("[data-test-id='notification']").should(Condition.visible);
 
     }
 }
